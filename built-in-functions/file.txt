@@ -1,0 +1,3 @@
+build/app/code/local/Cgi/ContactUs        app/code/local/Cgi/ContactUs
+build/app/etc/modules/*                   app/etc/modules/
+build/app/design/frontend/cgi/contactus/* app/design/frontend/cgi/contactus/

@@ -1,0 +1,12 @@
+sku:SS-458855
+product_name:Super Skinny Jeans
+short_description:92% Baumwolle / 6% Elastomultiester / 2% Elastan, Fit: Super Skinny
+is_enabled:no
+is_in_stock:yes
+qty:15
+price:129.95
+special_price:79.95
+size:30/32
+color_id:999
+color:blue
+image_url:http://cdn.richandroyal.de/media/external/D/SS-458855_999_1_455.jpg

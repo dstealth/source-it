@@ -235,7 +235,7 @@ function myEachValue($array, $arrayKey, $arrayValue)
 }
 
 
-//
+// Выбор сортировки
 function selectedSortKind($position)
 {
     if (
@@ -246,4 +246,54 @@ function selectedSortKind($position)
     } else {
         return '';
     }
+}
+
+/**
+ * Проверяет, авторизован пользователь или нет
+ * Возвращает true если авторизован, иначе false
+ * @return boolean
+ */
+function isAuth() {
+    if (isset($_SESSION["is_auth"])) {
+        return $_SESSION["is_auth"];
+    }
+    else return false;
+}
+
+
+/**
+ * Авторизация пользователя
+ * @param string $login
+ * @param string $passwors
+ */
+function auth($login, $passwors) {
+    if ($login && $passwors) {
+        $_SESSION["is_auth"] = true;
+        $_SESSION["login"] = $login;
+        return true;
+    }
+    else { //Логин и пароль не подошел
+        $_SESSION["is_auth"] = false;
+        return false;
+    }
+}
+
+
+/**
+ * Метод возвращает логин авторизованного пользователя
+ */
+function getLogin() {
+    if (isAuth()) { //Если пользователь авторизован
+        $arr = explode("@", $_SESSION["login"]);
+
+        return ucfirst($arr[0]); //Возвращаем логин, который записан в сессию
+    }
+}
+
+
+
+
+function out() {
+    $_SESSION = array(); //Очищаем сессию
+    session_destroy(); //Уничтожаем
 }

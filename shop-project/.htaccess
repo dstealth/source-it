@@ -1,0 +1,4 @@
+<Files "shop-project">
+Order Deny,Allow
+  Deny from all
+</Files>

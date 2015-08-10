@@ -1,6 +1,5 @@
 <?php
-
-require_once (__DIR__ . '/auth.php');
+require_once(__DIR__ . '/shop-project/auth.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +9,7 @@ require_once (__DIR__ . '/auth.php');
 </head>
 <body>
 
-<form action="script/upload.php" method="post" enctype="multipart/form-data">
+<form action="shop-project/script/upload.php" method="post" enctype="multipart/form-data">
     <h4>Загрузите файл: </h4>
     <input type=file name=uploadfile>
     <input type=submit value=Загрузить></form>

@@ -1,5 +1,4 @@
 <?php
-header("Content-type: charset=UTF-8");
 require_once 'bootstrap.php';
 if (!isset($conf['habr_url'])) {
     exit('Habr base url was not found in the configuration.');
